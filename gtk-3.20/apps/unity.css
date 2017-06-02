@@ -17,43 +17,40 @@ UnityDecoration {
     -UnityDecoration-title-alignment: 0.0;
 }
 
-UnityDecoration.top {
-    border: 1px solid @toolbar_bg_color;
-    border-bottom-width: 0;
+UnityDecoration .top {
+    border: none;
     border-radius: 6px 6px 0 0;
     padding: 1px 8px 0 8px;
     background-color: @titlebar_bg_color;
     background-image: linear-gradient(to bottom,
-                                      shade(@toolbar_bg_color, 1.08),
-                                      shade(@toolbar_bg_color, 1.05),
-                                      @toolbar_bg_color
+                                      shade(@titlebar_bg_color, 1.02),
+                                      shade(@titlebar_bg_color, 1.0)
                                       );
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }
 
-UnityDecoration.top:backdrop {
-    border: 1px solid @toolbar_bg_color;
-    border-bottom-width: 0;
-    background-color: @titlebar_bg_color;
-    background-image: linear-gradient(to bottom,
-                                      @toolbar_bg_color,
-                                      @toolbar_bg_color,
-                                      @toolbar_bg_color
-                                      );
+UnityDecoration .top:backdrop {
+    background-color: @theme_unfocused_bg_color;
+    background-image: none;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
 }
 
-UnityDecoration.left,
-UnityDecoration.right,
+UnityDecoration .left,
+UnityDecoration .right,
 UnityDecoration.bottom {
-    background-color: @toolbar_bg_color;
+    background-color: @titlebar_bg_color;
 }
 
-UnityDecoration.left:backdrop,
-UnityDecoration.right:backdrop,
+UnityDecoration .left:backdrop,
+UnityDecoration .right:backdrop,
 UnityDecoration.bottom:backdrop {
-    background-color: @toolbar_bg_color;
+    background-color: @titlebar_bg_color;
+}
+
+UnityDecoration .bottom {
+    background-image: none;
+    background-color: @borders;
 }
 
 UnityPanelWidget,
@@ -76,8 +73,27 @@ UnityPanelWidget,
     color: @panel_fg_color;
 }
 
+/* new menubar function in unity 7.5 */
+UnityDecoration.menuitem,
+UnityDecoration .menuitem {
+    border-radius: 0;
+}
+
+UnityDecoration .menuitem:hover,
+UnityDecoration .menuitem *:hover,
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
     background-image: none;
-    color: shade(@panel_fg_color, 1.08);
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+@keyframes playbackmenuitem_spinner {
+    to { -gtk-icon-transform: rotate(1turn); }
+}
+
+.menu IdoPlaybackMenuItem.menuitem:active {
+    -gtk-icon-source: -gtk-icontheme("process-working-symbolic");
+    animation: playbackmenuitem_spinner 1s infinite linear;
+    color: @selected_bg_color;
 }
