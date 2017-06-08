@@ -8,6 +8,4 @@
 
 **License:** GPL v3
 
-# Chrome OS's theme for Linux
- 
 > **Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html**
