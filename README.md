@@ -10,5 +10,8 @@ Mac OS theme with the Aqua design guidelines
 
 **License:** GPL v3
 
+**More info :** http://b00merang.weebly.com/mac-os-x-cheetah.html
 
-> **Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html**
+***
+
+> Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html
