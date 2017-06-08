@@ -8,4 +8,6 @@
 
 **License:** GPL v3
 
+**Mac OS theme with the Aqua design guidelines**
+
 > **Installation instructions : http://b00merang.weebly.com/easy-installation-guide.html**
