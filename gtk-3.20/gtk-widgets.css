@@ -699,6 +699,12 @@ frame > border {
     box-shadow: none;
 }
 
+frame.flat > border,
+frame > border.flat,
+statusbar frame > border {
+    border: none;
+}
+
 /*******************
  * scrolled window *
  *******************/
@@ -1311,9 +1317,16 @@ modelbutton:active:hover {
     box-shadow: none;
 }
 
+modelbutton.flat arrow.left {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic");
+}
 
-/* Nautilus rename popup */
-.csd popover.background, popover.background {
+modelbutton.flat arrow.right {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+popover.background,
+.csd popover.background {
     box-shadow: 0 0 2px 0px gray;
     border: 1px solid @borders; }
 popover.background:backdrop {
@@ -3917,48 +3930,56 @@ GtkBubbleWindow toolbar {
  * CSD *
  *******/
 decoration {
-  border-radius: 4px 4px 0 0;
-  border-width: 0px;
-  box-shadow: 0 3px 9px 1px rgba(0,0,0,0.3), 0 0 0 1px rgba(0, 0, 0, 0.23);
-  margin: 10px; }
-  decoration:backdrop {
+    border-radius: 4px 4px 0 0;
+    border-width: 0px;
+    box-shadow: 0 3px 9px 1px rgba(0,0,0,0.3), 0 0 0 1px rgba(0, 0, 0, 0.23);
+    margin: 10px;
+}
+
+decoration:backdrop {
     box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.18);
-    transition: 200ms ease-out; }
-  .maximized decoration, .fullscreen decoration, .tiled decoration {
-    border-radius: 0; }
-  .popup decoration {
-    box-shadow: none; }
-  .ssd decoration {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23); }
-  .csd.popup decoration {
+    transition: 200ms ease-out;
+}
+
+.maximized decoration, .fullscreen decoration, .tiled decoration {
     border-radius: 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); }
-/*  tooltip.csd decoration {
+}
+
+.popup decoration {
+    box-shadow: none;
+}
+
+.ssd decoration {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.23);
+}
+
+.csd.popup decoration {
     border-radius: 0;
-    box-shadow: none; } */
-  messagedialog.csd decoration {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+}
+
+/*tooltip.csd decoration {
+    border-radius: 0;
+    box-shadow: none;
+}
+ */
+messagedialog.csd decoration {
     border-radius: 0;
     background-color: @theme_bg_color;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); }
-  .solid-csd decoration {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
+}
+
+.solid-csd decoration {
     margin: 0;
     padding: 4px;
     background-color: @bg_color;
     border: solid 1px shade(@bg_color, 0.8);
     border-radius: 0;
-    box-shadow: inset 0 0 0 3px rgba(0,0,0,0.3), inset 0 1px rgba(20, 20, 20, 0.8); }
-    .solid-csd decoration:backdrop {
-      box-shadow: inset 0 0 0 3px rgba(0,0,0,0.3), inset 0 1px rgba(20, 20, 20, 0.8); }
-
-/* Server-side decoration (SSD) */
-.window-frame.ssd {
-    border-radius: 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18); 
+    box-shadow: inset 0 0 0 3px rgba(0,0,0,0.3), inset 0 1px rgba(20, 20, 20, 0.8);
 }
 
-.window-frame.ssd,
-.window-frame.ssd:backdrop {
-    background-color: @theme_bg_color;
+.solid-csd decoration:backdrop {
+    box-shadow: inset 0 0 0 3px rgba(0,0,0,0.3), inset 0 1px rgba(20, 20, 20, 0.8);
 }
 
 /* titlebutton */
