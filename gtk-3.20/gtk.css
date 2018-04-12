@@ -10,6 +10,8 @@
 @define-color unfocused_bg_color #e4e4e4;
 @define-color unfocused_fg_color #8c8c8c;
 
+@define-color dark_selected_bg_color #2563ae;
+
 /* dark color scheme */
 @define-color dark_bg_color #e0dee1;
 @define-color dark_fg_color #4c4c4c;
