@@ -47,7 +47,7 @@ style "default"
 	GtkScrolledWindow::shadow_type = GTK_SHADOW_OUT
 	GtkMenuBar::shadow_type = GTK_SHADOW_ETCHED_IN
 	GtkToolbar::shadow_type = GTK_SHADOW_OUT
-	GtkStatusbar::shadow_type = GTK_SHADOW_NONE
+	GtkStatusbar::shadow_type 			= GTK_SHADOW_NONE
 	
 ################################################################################
 # DEFAULT COLORS FOR LISTINGS AND TREEVIEWS

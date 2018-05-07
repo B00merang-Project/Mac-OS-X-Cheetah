@@ -386,8 +386,8 @@ treeview header button {
                 inset -1px 0 2px 0 alpha(gray, 0.4);
 }
 
-treeview header button:active,
 treeview header button:focus,
+treeview header button:active,
 treeview header button:active:focus {
     background-image: linear-gradient(to bottom, #b6d2ed, #8ebbe8 35%, #63a1df 36%, #b9edff);
     border-color: #07067b;
@@ -1024,6 +1024,9 @@ menu {
     border-radius: 0;
     border-style: none;
     background-color: @menu_bg_color;
+    background-image: linear-gradient(to bottom, transparent 35%, alpha(gray, 0.5) 50%, transparent 55%);
+    background-size: 100% 4px;
+    background-repeat: repeat;
     color: @menu_fg_color;
 }
 
@@ -1125,7 +1128,7 @@ menu > menuitem {
     border-style: solid;
     border-color: transparent;
     border-radius: 0;
-    background-color: @menu_bg_color;
+    background-color: transparent;
     background-image: none;
     color: @menu_fg_color;
 }
@@ -1955,31 +1958,16 @@ scrollbar.vertical slider:backdrop {
     background-image: linear-gradient(to right, @theme_base_color 15%, @theme_bg_color 40%, @theme_base_color 75%);
 }
 
-scrollbar slider:hover,
-scrollbar.vertical slider:hover {
-    border-color: transparent;
-    background-color: mix(@theme_bg_color, @theme_fg_color, 0.31);
-}
-
-scrollbar slider:active,
-scrollbar.vertical slider:active {
-    border-color: transparent;
-    background-color: shade(@theme_bg_color, 0.8);
-}
-
-scrollbar slider.fine-tune:hover:active {
-    border-width: 2px;
-    border-color: transparent;
-}
-
 scrollbar.vertical button.down {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
 scrollbar.vertical button.up {
     -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
 scrollbar.horizontal button.down {
-    -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+/*    -gtk-icon-source: -gtk-icontheme("pan-right-symbolic");*/
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 scrollbar.horizontal button.up {
-    -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+/*    -gtk-icon-source: -gtk-icontheme("pan-left-symbolic");*/
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 
 /*************
  * separator *
@@ -2645,66 +2633,6 @@ toolbar:disabled {
                                       shade(@titlebar_bg_color, 0.95),
                                       shade(@titlebar_bg_color, 0.9)
                                       );
-}
-
-/* primary toolbar button */
-.primary-toolbar combobox,
-.primary-toolbar button {
-   padding: 0 6px;
-}
-
-.primary-toolbar .raised button,
-.primary-toolbar .raised button,
-toolbar combobox,
-toolbar button {
-   padding: 0 6px;
-}
-
-.primary-toolbar .raised button:backdrop,
-.primary-toolbar .raised button:backdrop,
-toolbar combobox:backdrop,
-toolbar button:backdrop {
-}
-
-.primary-toolbar .raised button:checked:backdrop,
-.primary-toolbar .raised button:checked:backdrop,
-toolbar combobox:checked:backdrop,
-toolbar button:checked:backdrop {
-
-}
-
-.primary-toolbar button:hover,
-.primary-toolbar button:checked,
-toolbar button:hover {
-}
-
-.primary-toolbar button:active,
-toolbar button:active {
-}
-
-.primary-toolbar button:active:hover,
-toolbar button:active:hover {
-}
-
-.primary-toolbar button:focus,
-.primary-toolbar button:hover:focus,
-.primary-toolbar button:active:focus,
-.primary-toolbar button:active:hover:focus,
-toolbar button:focus,
-toolbar button:hover:focus,
-toolbar button:active:focus,
-toolbar button:active:hover:focus {
-    border-color: shade(@toolbar_bg_color, 0.7);
-}
-
-.primary-toolbar button:disabled,
-toolbar button:disabled {
-    border-color: alpha(@theme_fg_color, 0.15);
-}
-
-.primary-toolbar button:active *:disabled,
-toolbar button:active *:disabled {
-    background-color: shade(@toolbar_bg_color, 0.80);
 }
 
 .primary-toolbar entry,
@@ -3996,7 +3924,7 @@ decoration:backdrop {
 messagedialog.csd decoration {
     border-radius: 0;
     background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom, transparent 35%, alpha(gray, 0.5) 50%, transparent 55%);
+    background-image: linear-gradient(to bottom, @titlebar_bg_color 35%, alpha(gray, 0.5) 50%, @titlebar_bg_color 55%);
     background-size: 100% 4px;
     background-repeat: repeat;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13);
@@ -4049,7 +3977,7 @@ messagedialog.csd decoration {
 .titlebar:not(headerbar) {
     border-radius: 4px 4px 0 0;
     background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom, transparent 35%, alpha(gray, 0.5) 50%, transparent 55%);
+    background-image: linear-gradient(to bottom, @titlebar_bg_color 35%, alpha(gray, 0.5) 50%, @titlebar_bg_color 55%);
     background-size: 100% 4px;
     background-repeat: repeat;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
@@ -4071,9 +3999,10 @@ headerbar.default-decoration,
 .csd .default-decoration.titlebar:not(headerbar) {
     min-height: 28px;
     padding: 0 3px;
-    background-color: @toolbar_bg_color;
-    background-image: image(@toolbar_bg_color);
-    border-bottom-width: 0; }
+    background-color: @titlebar_bg_color;
+    background-image: image(@titlebar_bg_color);
+    border-bottom-width: 0;
+}
 
 headerbar.default-decoration:backdrop,
 .csd headerbar.default-decoration:backdrop,
