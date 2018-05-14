@@ -29,7 +29,7 @@ stage {
 	border: none;
 	margin-top: 0.5em;
 	padding: 10px 32px;
-	color: #336bbb;
+	color: #026ec4;
 	font-weight: normal;
 	background-color: transparent;
 	box-shadow: none;
@@ -55,7 +55,7 @@ StEntry {
 	box-shadow: none;
 	background-gradient-direction: none;
 	border-color: #acacac;
-	selection-background-color:#336bbb;
+	selection-background-color:#026ec4;
 	selected-color: white; }
 	StEntry:focus {
 		background-color: #fff;
@@ -99,8 +99,8 @@ StScrollBar {
 	-slider-height: 1px;
 	-slider-background-color: #939393;
 	-slider-border-color: #adadad;
-	-slider-active-background-color:#336bbb;
-	-slider-active-border-color:#336bbb;
+	-slider-active-background-color:#026ec4;
+	-slider-active-border-color:#026ec4;
 	-slider-border-width: 0px;
 	-slider-handle-radius: 8px;
 }
@@ -399,15 +399,15 @@ StScrollBar {
 			box-shadow: none;
 			font-weight: normal; }
 		.popup-menu .popup-menu-item:hover, .popup-menu .popup-menu-item:focus {
-			background-color: #336bbb;
+			background-color: #026ec4;
 			color: white }
 		.popup-menu .popup-menu-item:active {
-			background-color: #336bbb;
+			background-color: #026ec4;
 			color: white; }
 		.popup-menu .popup-menu-item:insensitive {
 			color: #1f1f1f; }
 	.popup-menu .active {
-		background-color: #336bbb; }
+		background-color: #026ec4; }
 	.popup-menu .popup-inactive-menu-item {
 		color: black; }
 		.popup-menu .popup-inactive-menu-item:insensitive {
@@ -536,7 +536,7 @@ StScrollBar {
 
 .ws-switcher-active-up, .ws-switcher-active-down {
 	height: 50px;
-	background-color:#336bbb;
+	background-color:#026ec4;
 	color: white;
 	background-size: 32px;
 	border-radius: 6px; }
@@ -614,7 +614,7 @@ StScrollBar {
 			margin-left: 2px;
 			margin-right: 0px; }
 		#panel .panel-button:active, #panel .panel-button:overview, #panel .panel-button:focus, #panel .panel-button:checked {
-			background-color: #336bbb;
+			background-color: #026ec4;
 			box-shadow: none;
 			background-image: none;
 			background-gradient-direction: none;
@@ -711,7 +711,7 @@ StScrollBar {
 	background-gradient-direction: none;
 	box-shadow: none;
 	border: none;
-	background-color:#336bbb; }
+	background-color:#026ec4; }
 
 .datemenu-today-button .date-label {
 	font-size: 1.5em; }
@@ -787,8 +787,8 @@ StScrollBar {
 	background-image: none;
 	text-shadow:none;
 	font-weight: normal;
-	color: white;  /*#336bbb*/
-	background-color: #336bbb;
+	color: white;  /*#026ec4*/
+	background-color: #026ec4;
 	border: none; }
 
 .calendar-day-with-events {
@@ -902,12 +902,12 @@ StScrollBar {
 }
 .system-menu-action:hover, .system-menu-action:focus {
 	color: #fff;
-	background-color: #336bbb;
+	background-color: #026ec4;
 	border: none;
 	padding: 14px;
 }
 .system-menu-action:active {
-	background-color: #336bbb;
+	background-color: #026ec4;
 	color: #fff;
 }
 .system-menu-action > StIcon {
@@ -987,7 +987,7 @@ StScrollBar {
 	spacing: 20px; }
 
 .nm-dialog-item:selected {
-	background-color:#336bbb;
+	background-color:#026ec4;
 	color: white; }
 
 .nm-dialog-icons {
@@ -1031,7 +1031,7 @@ StScrollBar {
 	padding: 4px 12px;
 	-shell-caption-spacing: 12px; }
 .window-caption:hover {
-	background-color: #336bbb;
+	background-color: #026ec4;
 	color: #4c4c4c;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5);
 }
@@ -1337,7 +1337,7 @@ StScrollBar {
 }
 
 .workspace-thumbnail-indicator {
-	border: 3px #336bbb;
+	border: 3px #026ec4;
 	border-radius: 1px;
 	padding: 0px;
 }
@@ -1425,7 +1425,7 @@ StScrollBar {
 	border-radius: 4px;
 	background-gradient-direction: none;
 	box-shadow: none;
-	selection-background-color: #336bbb;
+	selection-background-color: #026ec4;
 	selected-color: white;}
 	.notification StEntry:focus,
 	.notification-banner StEntry:focus {
@@ -1704,7 +1704,7 @@ StScrollBar {
 		padding: 3px 18px; }
 		.login-dialog .modal-dialog-button:default {
 			color: white;
-			background-color: #336bbb;
+			background-color: #026ec4;
 			border: none;
 			box-shadow: none;
 			icon-shadow: none; }
@@ -1767,7 +1767,7 @@ StScrollBar {
 	.login-dialog-user-list-item:rtl {
 		padding-left: 1em; }
 	.login-dialog-user-list-item:hover {
-		background-color:#336bbb;
+		background-color:#026ec4;
 		color: white; }
 	.login-dialog-user-list-item .login-dialog-timed-login-indicator {
 		height: 2px;
@@ -1909,7 +1909,7 @@ StScrollBar {
 		spacing: 4px; }
 
 .lg-dialog StEntry {
-	selection-background-color: #336bbb;
+	selection-background-color: #026ec4;
 	selected-color: white; }
 .lg-dialog .shell-link {
 	color: #fc6f5d; }
@@ -1972,7 +1972,7 @@ StScrollBar {
 	background-color: transparent;
 	margin-top: 0.5em;
 	padding: 4px 36px;
-	color: #336bbb;
+	color: #026ec4;
 	font-weight: normal;
 	box-shadow: none;
 	icon-shadow: none;

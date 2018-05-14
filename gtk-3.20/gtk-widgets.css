@@ -3923,7 +3923,7 @@ decoration:backdrop {
 }
  */
 messagedialog.csd decoration {
-    border-radius: 0;
+    border-radius: 4px 4px 0 0;
     background-color: @theme_base_color;
     background-image: linear-gradient(to bottom, @titlebar_bg_color 35%, alpha(gray, 0.5) 50%, @titlebar_bg_color 55%);
     background-size: 100% 4px;
@@ -3983,6 +3983,7 @@ messagedialog.csd decoration {
     background-repeat: repeat;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
+    min-height: 20px;
 }
 
 .titlebar:backdrop,
