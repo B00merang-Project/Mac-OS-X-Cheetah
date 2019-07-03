@@ -1,8 +1,10 @@
-# Mac OS X Cheetah Theme for Linux
+[![built-with-azurra-framework](https://github.com/Elbullazul/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/Elbullazul/Azurra_framework)
+
+# Mac OS X 'Cheetah'
 
 Mac OS theme with the Aqua design guidelines
 
-![mac-os-x-10](https://github.com/B00merang-Project/gallery/raw/master/Mac%20OS%20X%20Cheetah%20(3).png)
+![mac-os-x](https://github.com/B00merang-Project/gallery/raw/master/Mac%20OS%20X%20Cheetah%20(3).png)
 
 **Maintainer :** [Elbullazul](https://github.com/Elbullazul)
 
