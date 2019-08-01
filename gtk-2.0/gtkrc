@@ -1752,7 +1752,8 @@ style "notebook" = "default"
 			function = BOX_GAP
 			gap_side = BOTTOM
 			file = "Tabs/notebook_bottom_flat.png"
-			border = {1,1,1,4}
+			#border = {1,1,1,4}
+			border = {10,10,10,15}
 			stretch = TRUE
 		}
 		# Use this when the tabs are on the left
@@ -1761,7 +1762,8 @@ style "notebook" = "default"
 			function = BOX_GAP
 			gap_side = LEFT
 			file = "Tabs/notebook_left_flat.png"
-			border = {4,1,1,1}
+			#border = {4,1,1,1}
+			border = {15,10,10,10}
 			stretch = TRUE
 		}
 		# Use this when the tabs are on the right
@@ -1770,7 +1772,8 @@ style "notebook" = "default"
 			function = BOX_GAP
 			gap_side = RIGHT
 			file = "Tabs/notebook_right_flat.png"
-			border = {1,4,1,1}
+			#border = {1,4,1,1}
+			border = {10,15,10,10}
 			stretch = TRUE
 		}
 	}
@@ -2020,6 +2023,21 @@ class "GtkPaned"       			style "handlebox"
 class "GtkLayout"     			style "layout"
 #class "SPButton"         		style "SPbutton"
 
+# Text Style
+style "text" = "default" {
+  engine "murrine" { textstyle = 0 }
+}
+
+style "menu_text" = "menu_item" {
+  engine "murrine" { textstyle = 0 }
+}
+
+# Fixes ugly text shadows for insensitive text
+widget_class "*<GtkLabel>"                                          style "text"
+widget_class "*<GtkMenu>*<GtkLabel>"                                style "menu_text" 
+widget_class "*<GtkComboBox>*<GtkCellLayout>"                       style "text"
+widget_class "*<GtkNotebook>*<GtkLabel>"                            style "text"
+widget_class "*<GtkNotebook>*<GtkCellLayout>"                       style "text"
 
 # prevent Sodipodi from crashing
 class "SPColorSlider" 			style "unstyle"
