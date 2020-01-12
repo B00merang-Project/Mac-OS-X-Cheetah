@@ -1,11 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=macOS Sierra
-Comment=A theme by Christian Medel (Elbullazul) simulating OS X 10.11 El Capitan / macOS Sierra
-Comment=v0.5
+Name=Mac OS X Cheetah
+Comment=A macOS theme based on Mac OS X 10.0
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=macOS Sierra
-MetacityTheme=macOS Sierra
+GtkTheme=Mac OS X Cheetah
+MetacityTheme=Mac OS X Cheetah
+IconTheme=Mac-OS-X-Cheetah
+CursorTheme=DMZ-Black
 ButtonLayout=close,minimize,maximize:
