@@ -1969,8 +1969,8 @@ StScrollBar {
 .candidate-page-button,
 .modal-dialog-button,
 .modal-dialog-linked-button {
-	border-radius: 0;
-	border: none;
+	border-radius: 6px;
+	border: 1px solid transparent;
 	background-color: transparent;
 	margin-top: 0.5em;
 	padding: 4px 36px;
@@ -1985,7 +1985,7 @@ StScrollBar {
 
 .modal-dialog-button:focus,
 .modal-dialog-linked-button:focus {
-	font-weight: bold;
+	border-color: #026ec4; 
 }
 
 .candidate-page-button:active,
