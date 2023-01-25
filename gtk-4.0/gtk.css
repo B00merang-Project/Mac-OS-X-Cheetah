@@ -17,7 +17,7 @@ dnd {
 image:disabled {
   -gtk-icon-filter: opacity(0.5); }
 
-image, image:disabled, label, label:disabled, box, box:disabled {
+image, label, box {
   background-color: transparent; }
 
 .view {
@@ -807,16 +807,18 @@ headerbar {
     padding-right: 12px;
     color: alpha(currentColor, 0.7); }
   headerbar button {
-    padding: 4px 8px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 4px;
+    border-color: transparent;
+    border-radius: 40px;
     color: #000000;
-    border-color: #bbbbbb;
-    border-bottom-color: #848484;
-    background-color: #FFFFFF;
-    background-image: linear-gradient(to bottom, #F5F5F5 40%, #FFFFFF 75%);
-    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 1px 0 2px 0 rgba(0, 0, 0, 0.2), inset -1px 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 6px 3px -2px white; }
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent; }
+    headerbar button:hover {
+      color: #000000;
+      border-color: #848484;
+      background-color: #FFFFFF;
+      background-image: linear-gradient(to bottom, #FFFFFF 15%, #F5F5F5 40%, #FFFFFF 75%);
+      box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 1px 0 2px 0 rgba(0, 0, 0, 0.2), inset -1px 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 6px 3px -2px white; }
     headerbar button:active, headerbar button:checked {
       background-image: linear-gradient(to bottom, #b6d2ed, #8ebbe8 35%, #63a1df 36%, #b9edff);
       border-color: #07067b;
@@ -827,35 +829,33 @@ headerbar {
       headerbar button:active:backdrop, headerbar button:checked:backdrop {
         color: #8C8C8C;
         border-color: lightgray;
-        background-image: linear-gradient(to bottom, #FFFFFF 20%, #F8F8F8 40%, #FFFFFF 75%);
         background-color: lightgray;
         box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, 0.25), inset 0 1px #878787; }
-      headerbar button:active:disabled, headerbar button:checked:disabled {
-        color: #121212;
-        border-color: #c6c6c6;
-        background-image: linear-gradient(to bottom, #FFFFFF 20%, #F8F8F8 40%, #FFFFFF 75%);
-        background-color: #d1d1d1;
-        box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, 0.2), inset 0 1px #878787; }
-        headerbar button:active:disabled:backdrop, headerbar button:checked:disabled:backdrop {
-          color: #b8b8b8;
-          border-color: #dfdfdf;
-          background-color: #d8d8d8;
-          box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, 0.15), inset 0 1px #878787; }
     headerbar button:disabled {
-      color: #5c5c5c;
-      box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 1px 0 2px 0 rgba(0, 0, 0, 0.2), inset -1px 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 6px 3px -2px white; }
+      border-color: transparent;
+      color: rgba(0, 0, 0, 0.8);
+      background-color: transparent;
+      box-shadow: none; }
       headerbar button:disabled:backdrop {
-        color: #b8b8b8;
-        box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.15), inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 1px 0 2px 0 rgba(0, 0, 0, 0.2), inset -1px 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 6px 3px -2px white; }
+        border-color: transparent;
+        color: rgba(0, 0, 0, 0.7);
+        background-color: transparent;
+        box-shadow: none; }
     headerbar button:backdrop {
+      border-color: transparent;
+      background-color: transparent;
       color: #8C8C8C;
-      background-color: #FCFCFC;
-      box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 1px 0 2px 0 rgba(0, 0, 0, 0.2), inset -1px 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 6px 3px -2px white; }
-  headerbar entry {
-    padding: 4px 8px; }
+      box-shadow: none; }
   headerbar.titlebar, .titlebar headerbar {
     border-radius: 4px 4px 0px 0px; }
-  headerbar .titlebutton.close, headerbar .titlebutton.maximize, headerbar .titlebutton.minimize, headerbar .titlebutton:not(separator) {
+
+windowcontrols {
+  border-spacing: 6px; }
+  windowcontrols.start:not(.empty):dir(ltr), windowcontrols.end:not(.empty):dir(rtl) {
+    margin-right: 7px; }
+  windowcontrols.start:not(.empty):dir(rtl), windowcontrols.end:not(.empty):dir(ltr) {
+    margin-left: 7px; }
+  windowcontrols button.close, windowcontrols button.maximize, windowcontrols button.minimize {
     padding: 2px 2px;
     border: none;
     color: transparent;
@@ -864,31 +864,31 @@ headerbar {
     -gtk-icon-shadow: none;
     background-position: center;
     background-repeat: no-repeat; }
-  headerbar .titlebutton:backdrop {
+  windowcontrols button:backdrop {
     opacity: 0.6; }
-  headerbar .titlebutton.close {
+  windowcontrols button.close {
     background: url("assets/close-normal.png") 100% 100%; }
-    headerbar .titlebutton.close:hover {
+    windowcontrols button.close:hover {
       background: url("assets/close-hover.png") 100% 100%; }
-    headerbar .titlebutton.close:active {
+    windowcontrols button.close:active {
       background: url("assets/close-active.png") 100% 100%; }
-    headerbar .titlebutton.close:backdrop {
+    windowcontrols button.close:backdrop {
       background: url("assets/close-backdrop.png") 100% 100%; }
-  headerbar .titlebutton.minimize {
+  windowcontrols button.minimize {
     background: url("assets/minimize-normal.png") 100% 100%; }
-    headerbar .titlebutton.minimize:hover {
+    windowcontrols button.minimize:hover {
       background: url("assets/minimize-hover.png") 100% 100%; }
-    headerbar .titlebutton.minimize:active {
+    windowcontrols button.minimize:active {
       background: url("assets/minimize-active.png") 100% 100%; }
-    headerbar .titlebutton.minimize:backdrop {
+    windowcontrols button.minimize:backdrop {
       background: url("assets/minimize-backdrop.png") 100% 100%; }
-  headerbar .titlebutton.maximize {
+  windowcontrols button.maximize {
     background: url("assets/maximize-normal.png") 100% 100%; }
-    headerbar .titlebutton.maximize:hover {
+    windowcontrols button.maximize:hover {
       background: url("assets/maximize-hover.png") 100% 100%; }
-    headerbar .titlebutton.maximize:active {
+    windowcontrols button.maximize:active {
       background: url("assets/maximize-active.png") 100% 100%; }
-    headerbar .titlebutton.maximize:backdrop {
+    windowcontrols button.maximize:backdrop {
       background: url("assets/maximize-backdrop.png") 100% 100%; }
 
 window > .titlebar:not(headerbar), window > .titlebar:not(headerbar):backdrop, window.csd > .titlebar:not(headerbar), window.csd > .titlebar:not(headerbar):backdrop {
@@ -1751,7 +1751,7 @@ actionbar {
     padding: 0 12px; }
 
 scrolledwindow > overshoot.top {
-  background-image: radial-gradient(farthest-side at top, black, transparent);
+  background-image: radial-gradient(farthest-side at top, rgba(0, 0, 0, 0.5), transparent);
   background-size: 100% 50%;
   background-repeat: no-repeat;
   background-position: top;
@@ -1760,7 +1760,7 @@ scrolledwindow > overshoot.top {
   box-shadow: none; }
 
 scrolledwindow > overshoot.bottom {
-  background-image: radial-gradient(farthest-side at bottom, black, transparent);
+  background-image: radial-gradient(farthest-side at bottom, rgba(0, 0, 0, 0.5), transparent);
   background-size: 100% 50%;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -1769,7 +1769,7 @@ scrolledwindow > overshoot.bottom {
   box-shadow: none; }
 
 scrolledwindow > overshoot.left {
-  background-image: radial-gradient(farthest-side at left, black, transparent);
+  background-image: radial-gradient(farthest-side at left, rgba(0, 0, 0, 0.5), transparent);
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: left;
@@ -1778,7 +1778,7 @@ scrolledwindow > overshoot.left {
   box-shadow: none; }
 
 scrolledwindow > overshoot.right {
-  background-image: radial-gradient(farthest-side at right, black, transparent);
+  background-image: radial-gradient(farthest-side at right, rgba(0, 0, 0, 0.5), transparent);
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: right;
@@ -2421,10 +2421,7 @@ popover.entry-completion > contents {
   padding: 0; }
 
 statusbar {
-  padding: 4px;
-  color: #000000; }
-  statusbar frame > border {
-    border: none; }
+  padding: 4px; }
 
 menubutton > button > box {
   border-spacing: 6px; }
