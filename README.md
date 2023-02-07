@@ -10,6 +10,7 @@ Mac OS theme with the Aqua design guidelines
 - Any GTK-based desktop
 - Cinnamon
 - Gnome
+- MATE
 
 ### Manual installation
 Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`
