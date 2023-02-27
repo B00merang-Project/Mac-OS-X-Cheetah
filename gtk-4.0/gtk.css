@@ -453,12 +453,9 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 4px 8px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 40px;
+  border: 1px solid #848484;
   color: #000000;
-  border-color: #bbbbbb;
-  border-bottom-color: #848484;
   background-color: #FFFFFF;
   background-image: linear-gradient(to bottom, #f2f2f2 40%, #FFFFFF 75%);
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.3), inset 1px 0 2px 0 rgba(0, 0, 0, 0.2), inset -1px 0 2px 0 rgba(0, 0, 0, 0.2), inset 0 6px 3px -2px white; }
@@ -500,9 +497,9 @@ button {
     border-color: transparent;
     border-radius: 40px;
     color: #000000;
-    box-shadow: none;
+    background-color: transparent;
     background-image: none;
-    background-color: transparent; }
+    box-shadow: none; }
     button.flat:hover {
       color: #000000;
       border-color: #848484;
@@ -538,10 +535,8 @@ button {
       box-shadow: none; }
 
 button.destructive-action {
-  border-width: 1px;
-  border-style: solid;
-  border-color: #a30000;
   border-radius: 40px;
+  border: 1px solid #a30000;
   color: #fae6e6;
   background-color: #CC0000;
   background-image: linear-gradient(to bottom, #CC0000 40%, #f50000 75%);
@@ -558,14 +553,12 @@ button.destructive-action {
     background-color: #d94a4a; }
 
 button.suggested-action {
-  border-width: 1px;
-  border-style: solid;
   border-radius: 40px;
-  background-image: linear-gradient(to bottom, #b6d2ed, #8ebbe8 35%, #63a1df 36%, #b9edff);
-  border-color: #07067b;
+  border: 1px solid #07067b;
   border-left-color: #5397e7;
   border-right-color: #5397e7;
   border-bottom-color: #70acf3;
+  background-image: linear-gradient(to bottom, #b6d2ed, #8ebbe8 35%, #63a1df 36%, #b9edff);
   box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3), inset 1px 0 2px 0 rgba(0, 0, 0, 0.4), inset -1px 0 2px 0 rgba(0, 0, 0, 0.4), inset 0 4px 3px -2px rgba(255, 255, 255, 0.8); }
   button.suggested-action:active, button.suggested-action:checked {
     box-shadow: inset 0 2px 3px 1px rgba(0, 0, 0, 0.45), inset 0 -2px 3px 1px rgba(255, 255, 255, 0.45), inset 0 1px #324151; }
@@ -718,9 +711,9 @@ toolbar {
     border-color: transparent;
     border-radius: 40px;
     color: #000000;
-    box-shadow: none;
+    background-color: transparent;
     background-image: none;
-    background-color: transparent; }
+    box-shadow: none; }
     toolbar button.flat:hover {
       color: #000000;
       border-color: #848484;
@@ -880,9 +873,9 @@ headerbar {
     border-color: transparent;
     border-radius: 40px;
     color: #000000;
-    box-shadow: none;
+    background-color: transparent;
     background-image: none;
-    background-color: transparent; }
+    box-shadow: none; }
     headerbar button:hover {
       color: #000000;
       border-color: #848484;
@@ -2631,9 +2624,9 @@ menubutton arrow {
   border-color: transparent;
   border-radius: 40px;
   color: #000000;
-  box-shadow: none;
+  background-color: transparent;
   background-image: none;
-  background-color: transparent; }
+  box-shadow: none; }
   .toolbar > button:hover,
   .toolbar > :not(.linked) > button:hover,
   .toolbar :not(.linked) > menubutton > button:hover,
