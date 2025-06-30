@@ -79,7 +79,6 @@ gridview > rubberband {
   background-color: rgba(59, 130, 214, 0.3); }
 
 gridview > child {
-  padding: 3px;
   transition: outline-width 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), outline-offset 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   gridview > child:selected {
     color: #FFFFFF;
@@ -87,9 +86,6 @@ gridview > child {
     gridview > child:selected:backdrop {
       color: #707070;
       background-color: #aeaeae; }
-  gridview > child box {
-    border-spacing: 8px;
-    margin: 12px; }
 
 coverflow cover {
   color: #000000;
@@ -974,15 +970,19 @@ headerbar {
       background-repeat: no-repeat;
       box-shadow: none;
       -gtk-icon-shadow: none;
-      background: url("assets/close-normal.png"); }
+      background: url("assets/close-normal.png");
+      background-repeat: no-repeat; }
       headerbar windowcontrols button.close:backdrop {
         opacity: 0.6; }
       headerbar windowcontrols button.close:hover {
-        background: url("assets/close-hover.png"); }
+        background: url("assets/close-hover.png");
+        background-repeat: no-repeat; }
       headerbar windowcontrols button.close:active {
-        background: url("assets/close-active.png"); }
+        background: url("assets/close-active.png");
+        background-repeat: no-repeat; }
       headerbar windowcontrols button.close:backdrop {
-        background: url("assets/close-backdrop.png"); }
+        background: url("assets/close-backdrop.png");
+        background-repeat: no-repeat;}
     headerbar windowcontrols button.maximize {
       padding: 0px;
       min-width: 20px;
@@ -996,15 +996,19 @@ headerbar {
       background-repeat: no-repeat;
       box-shadow: none;
       -gtk-icon-shadow: none;
-      background: url("assets/maximize-normal.png"); }
+      background: url("assets/maximize-normal.png"); 
+      background-repeat: no-repeat; }
       headerbar windowcontrols button.maximize:backdrop {
         opacity: 0.6; }
       headerbar windowcontrols button.maximize:hover {
-        background: url("assets/maximize-hover.png"); }
+        background: url("assets/maximize-hover.png");
+        background-repeat: no-repeat; }
       headerbar windowcontrols button.maximize:active {
-        background: url("assets/maximize-active.png"); }
+        background: url("assets/maximize-active.png");
+        background-repeat: no-repeat; }
       headerbar windowcontrols button.maximize:backdrop {
-        background: url("assets/maximize-backdrop.png"); }
+        background: url("assets/maximize-backdrop.png");
+        background-repeat: no-repeat; }
     headerbar windowcontrols button.minimize {
       padding: 0px;
       min-width: 20px;
@@ -1018,15 +1022,19 @@ headerbar {
       background-repeat: no-repeat;
       box-shadow: none;
       -gtk-icon-shadow: none;
-      background: url("assets/minimize-normal.png"); }
+      background: url("assets/minimize-normal.png"); 
+      background-repeat: no-repeat; }
       headerbar windowcontrols button.minimize:backdrop {
         opacity: 0.6; }
       headerbar windowcontrols button.minimize:hover {
-        background: url("assets/minimize-hover.png"); }
+        background: url("assets/minimize-hover.png");
+        background-repeat: no-repeat; }
       headerbar windowcontrols button.minimize:active {
-        background: url("assets/minimize-active.png"); }
+        background: url("assets/minimize-active.png");
+        background-repeat: no-repeat; }
       headerbar windowcontrols button.minimize:backdrop {
-        background: url("assets/minimize-backdrop.png"); }
+        background: url("assets/minimize-backdrop.png");
+        background-repeat: no-repeat; }
     .maximized headerbar windowcontrols button.maximize {
       padding: 0px;
       min-width: 20px;
